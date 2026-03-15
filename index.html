@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Job Board</title>
+
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/utilities.css">
+<link rel="stylesheet" href="css/themes.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo">TalentBridge</div>
+
+<div class="nav-links">
+<span>Find Jobs</span>
+<span>Companies</span>
+<span>Salaries</span>
+<span>Resources</span>
+</div>
+
+<div class="nav-right">
+<button id="themeToggle">🌙</button>
+<button class="btn-primary">Post a Job</button>
+</div>
+
+</nav>
+
+
+<header class="hero">
+
+<h1>Find your next role.<br>No noise, just opportunity.</h1>
+
+<p>Browse verified listings from top companies hiring right now.</p>
+
+<div class="search-bar">
+<input id="searchInput" placeholder="Job title, keyword or company">
+<select>
+<option>All Locations</option>
+</select>
+<button class="btn-primary">Search Jobs</button>
+</div>
+
+</header>
+
+
+<main class="container">
+
+<aside class="filters">
+<h3>Filters</h3>
+
+<div class="filter-item">
+<input type="checkbox" value="full-time"> Full-time
+</div>
+
+<div class="filter-item">
+<input type="checkbox" value="part-time"> Part-time
+</div>
+
+<div class="filter-item">
+<input type="checkbox" value="contract"> Contract
+</div>
+
+</aside>
+
+
+<!-- JS will inject jobs here -->
+<section class="jobs-section">
+
+<div class="jobs-header">
+<h2>Available Jobs</h2>
+
+<select id="sortSelect">
+<option value="recent">Most Recent</option>
+<option value="salary">Highest Salary</option>
+</select>
+
+</div>
+
+<div id="jobsContainer" class="jobs-grid"></div>
+
+</section>
+
+</main>
+
+
+<div id="jobModal" class="modal hidden">
+<div class="modal-content" id="modalContent"></div>
+</div>
+
+
+<div id="applyModal" class="modal hidden" aria-hidden="true" role="dialog" aria-labelledby="applyModalTitle">
+  <div class="modal-content">
+    <button class="close-modal" aria-label="Close">&times;</button>
+
+    <h2 id="applyModalTitle">Apply for this Role</h2>
+    <p class="apply-job-title" id="applyJobTitle">Job title</p>
+
+    <form id="applyForm">
+      <div class="form-row">
+        <input type="text" id="firstName" placeholder="First Name" required>
+        <input type="text" id="lastName" placeholder="Last Name" required>
+      </div>
+
+      <input type="email" id="email" placeholder="Email Address" required>
+      <input type="text" id="phone" placeholder="Phone Number">
+      <input type="url" id="portfolio" placeholder="Portfolio / LinkedIn URL">
+
+      <label class="file-upload">
+        <span>Resume / CV</span>
+        <input type="file" id="resume" accept=".pdf,.doc,.docx">
+        <span class="file-hint">PDF, DOC, DOCX — Max 5MB</span>
+      </label>
+
+      <button class="btn-primary submit-btn" type="submit">Submit Application</button>
+    </form>
+  </div>
+</div>
+
+
+
+<script src="js/data.js"></script>
+<script src="js/render.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/filter.js"></script>
+<script src="js/form.js"></script>
+
+</body>
+</html>

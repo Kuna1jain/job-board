@@ -1,0 +1,55 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family: Inter, system-ui, Arial;
+background:#f8fafc;
+color:#111827;
+}
+
+button{
+cursor:pointer;
+border:none;
+}
+
+input,select{
+outline:none;
+border:1px solid #e5e7eb;
+padding:12px;
+border-radius:8px;
+}
+
+/* base.css — Mobile default (no media query needed) */
+.jobs-grid {
+  display: flex;
+  flex-direction: column;   /* stacked on mobile */
+  gap: 12px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.navbar {
+  padding: 18px 20px;
+}
+
+.hero {
+  padding: 40px 20px;
+}
+
+.search-bar input {
+  width: 100%;
+}
+
+.job-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

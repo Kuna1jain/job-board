@@ -1,0 +1,15 @@
+.mt-20{
+margin-top:20px;
+}
+
+.flex{
+display:flex;
+}
+
+.space-between{
+justify-content:space-between;
+}
+
+.center{
+align-items:center;
+}

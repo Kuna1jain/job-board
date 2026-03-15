@@ -1,0 +1,54 @@
+/* Dark theme base */
+html[data-theme="dark"] {
+  background: #0f172a;
+  color: white;
+}
+html[data-theme="dark"] #themeToggle{
+background: transparent;
+color: white;
+}
+
+/* Body */
+html[data-theme="dark"] body {
+  background: #0f172a;
+  color: white;
+}
+
+/* Navbar */
+html[data-theme="dark"] .navbar {
+  background: #1e293b;
+  border-color: #334155;
+  color: white;
+}
+
+/* Job cards */
+html[data-theme="dark"] .job-card {
+  background: #1e293b;
+  border-color: #334155;
+  color: white;
+  
+}
+.view-btn{
+  background: #2563eb;
+  color: white;
+}
+
+/* Filters panel */
+html[data-theme="dark"] .filters {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+/* Inputs */
+html[data-theme="dark"] input,
+html[data-theme="dark"] select,
+html[data-theme="dark"] textarea {
+  background: #1e293b;
+  border-color: #334155;
+  color: white;
+}
+
+/* Buttons */
+html[data-theme="dark"] button {
+  color: white;
+}
