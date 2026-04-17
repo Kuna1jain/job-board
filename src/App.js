@@ -11,7 +11,7 @@ const [selectedJob, setSelectedJob] = useState(null);
 const [theme, setTheme] = useState("light");
 const [typeFilter, setTypeFilter] = useState("");
 // console.log("Selected Job:", selectedJob);
-// 🌙 Dark mode
+//  Dark mode
 useEffect(() => {
 document.documentElement.setAttribute("data-theme", theme);
 }, [theme]);
