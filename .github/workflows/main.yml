@@ -3,6 +3,7 @@ on: push
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: AWS-S3
     steps:
     # Get your code from github
       - name: Get Code
