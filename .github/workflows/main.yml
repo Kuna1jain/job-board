@@ -1,32 +1,37 @@
-name: Deply app to S3
+name: Deploy my react app to AWS S3 bucket
 on: push
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+    # Get your code from github
       - name: Get Code
         uses: actions/checkout@v3
-        
+
+        #Setup Node.js Enviroment
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 20
-          
+
+          #install dependencies
       - name: install dependencies
         run: npm ci
-        
+
+        #Build react app
       - name: Build project
         run: npm run build
-        
-      - name: Configure AWS creds
+
+        #Configure AWS Credentials using my secrets
+      - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
         with: 
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
 
       - name: Deploy build to S3
         run: |
-          aws s3 sync./build s3://${{secrets.S3_BUCKET_NAME }} --delete
+          aws s3 sync./build s3://${{ secrets.S3_BUCKET_NAME }} --delete
       
         
