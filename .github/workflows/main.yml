@@ -1,4 +1,4 @@
-name: Deploy my react app to AWS S3 bucket using static hosting
+name: Deploy my react app to AWS S3 bucket
 on: push
 jobs:
   deploy:
