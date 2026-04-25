@@ -61,7 +61,7 @@ onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
 {/* HERO */}
 <header className="hero">
 
-<h1>Find your next role.<br />No noise, just opportunity.</h1>
+<h1>Find your next role here.<br />No noise, Just lots of opportunity.</h1>
 
 <p>Browse verified listings from top companies hiring right now.</p>
 
